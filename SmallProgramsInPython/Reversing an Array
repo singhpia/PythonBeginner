@@ -1,0 +1,13 @@
+length_of_array = int(input("Enter length of array\n"))
+arr = []
+for i in range(length_of_array):
+    item = int(input(f"Enter element at {i}: "))
+    arr.append(item)
+print(f"array before reversing: {arr}\n")
+
+#using slicing
+print(arr[::-1])
+
+# using reversed()
+print(list(reversed(arr)))
+
