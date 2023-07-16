@@ -1,7 +1,7 @@
 ![Python DataStructures](image.png)
 # Python Data Structures
 ### A. **Built in Data Structures:**
- 1. ### **List**
+ 1. ## **List**
     Stores data of different datatypes in a sequential manner.Mutable in nature. Indexing is used to provide unique address to each element starting from 0 and till end of list called positive indexing and negative indexing (-1) to access elements from last to first.
     ### Declaring a List:
     ```python
@@ -81,7 +81,7 @@
 
 ## 2. **Dictionary**
 Used to store key-value pairs. E.g. A phone directory.
-A dictionary is a collection which is unordered, changeable and indexed.
+A dictionary is a collection which is unordered, changeable and indexed. Dictionary does not allow duplicate keys but values can be duplicated.
 
 ### Creating a dictionary
 - #### Using curly braces
@@ -141,7 +141,7 @@ A dictionary is a collection which is unordered, changeable and indexed.
   ```
 - Other functions used with dictionary
 
-  keys(), values(), items()
+  keys(), values(), items(), fromkeys()
   ```python
   my_dict = {'First': 'Python', 'Second': 'Java', 'Third': 'Ruby'}
   print(my_dict.keys()) #get keys
@@ -155,5 +155,55 @@ A dictionary is a collection which is unordered, changeable and indexed.
 
   print(my_dict.get('First'))
   # -> Python
-
   ```
+
+## 3.  **Tuple**
+Collection of objects separated by commas. Ordered, Immutable in nature i.e. post creation they cannot be modified. Tuples allows duplicates. Can be used as dictionary keys.
+
+### Creating a tuple
+Done using parenthesis, tuple()
+   ```python
+     tuple1 = ("tree", "leaf", 5,7,8)
+
+     a = tuple() # empty tuple
+     # -> ()
+     b = tuple((5,7,9,"left"))
+     # -> (5,7,9,"left")
+     c = tuple((2,))
+     # -> (2,)
+   ```
+### Appending elements
+Using '+' operator to add two tuples
+   ```python
+    tuple1 = (1,8,0,9)
+    tuple2 = (7,8,4)
+    tuple1 = tuple1 +tuple2 # add elements 
+    # -> (1,8,0,9,7,8,4)
+   ```
+### Accessing tuple elements
+Using slicing, loop, index.
+   ```python
+   tuple1 = (3,89,20,2)
+   n = 0
+   for i in tuple1: #using loop
+       print(f"Element at index {n} is {i}")
+       n+=1
+    
+   tuple1 [:2] # slicing
+    # -> (3,89)
+
+   tuple2 = (6,7,8,96,'rabbit') #index
+   print(tuple2[0])
+   # -> 6
+   print(tuple[4][5]) #[4] = 'rabbit'
+   # -> t
+   ```
+#### Other functions
+ count(), index()
+   ```python
+    my_tuple = (1, 2, 3, ['hindi', 'python'])
+    my_tuple.count(2) # 1
+    my_tuple.index(['hindi', 'python']) # 3
+    my_tuple[3][1] = 'english'
+    # -> (1,2,3,['hindi', 'english'])
+   ```
