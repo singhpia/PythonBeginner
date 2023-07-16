@@ -1,0 +1,17 @@
+# Write a method that will take a string as an argument.
+# The method will reverse the position of words and return it.
+
+sentence = input("enter a sentence\n")
+list_of_strings = sentence.split()[::-1]
+print(f"reversing sequence : {list_of_strings}")
+list1 = []
+
+#using loop
+for i in list_of_strings:
+    list1.append(i)
+print(" ".join(list1))
+
+# using reversed()
+words = sentence.split()
+reversed_strings = " ".join(reversed(words))
+print(f"reversed string is {reversed_strings}")
