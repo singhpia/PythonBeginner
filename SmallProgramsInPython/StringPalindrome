@@ -1,0 +1,29 @@
+#using slicing
+def is_palindrome(name):
+    return name == name[::-1]
+
+input_string = "RAR"
+
+output = is_palindrome(input_string)
+
+if output:
+    print("is palindrome")
+else:
+    print("not palindrome")
+
+# using reversed
+def reverse_is_palindrome(string):
+    return string == "".join(reversed(string))
+
+n = input("enter any string\n")
+ans = reverse_is_palindrome(n)
+if ans:
+    print("string is palindrome")
+else:
+    print("string is not palindrome")
+
+#using loop
+temp = ""
+for i in n:
+    temp = i + temp
+print("reversed word is {0}".format(temp))
